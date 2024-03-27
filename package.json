@@ -1,0 +1,23 @@
+{
+  "name": "rest-api-auth-crud",
+  "version": "1.0.0",
+  "description": "Restful api auth - crud with express mongodb",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "start": "npx tsc -w",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Angger Nur Amin",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0"
+  }
+}
