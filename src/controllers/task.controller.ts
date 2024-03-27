@@ -8,7 +8,7 @@ import {
   getTaskFromDB,
   getTaskFromDBById,
   updateTaskFromDB
-} from '../services/product.service'
+} from '../services/task.service'
 
 export const addTask = async (req: Request, res: Response) => {
   // tambahkan task_id dahulu sebelum masuk validasi
