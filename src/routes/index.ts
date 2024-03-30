@@ -1,9 +1,11 @@
 import { Application, Router } from 'express'
 import { TaskRouter } from './task.route'
 import { AuthRouter } from './auth.router'
+import { HomeRouter } from './home.router'
 
 // Kumpulan router pada folder routes yang akan dikirimkan ke index
 const _routes: Array<[string, Router]> = [
+  ['/', HomeRouter],
   ['/task', TaskRouter],
   ['/auth', AuthRouter]
 ]
