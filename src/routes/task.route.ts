@@ -10,5 +10,5 @@ TaskRouter.get('/', getTask)
 TaskRouter.get('/:id', getTask)
 TaskRouter.post('/', requireUser, addTask) // menambahan middleware otorisasi dimana jika mengakses endpoint ini , user diharuskan login terlebih dahulu
 // TaskRouter.post('/', requireAdmin, addTask) // menambahan middleware otorisasi dimana jika mengakses endpoint ini , user diharuskan login terlebih dahulu dan Rolw User adalah Admin
-TaskRouter.put('/:id', updateTask)
-TaskRouter.delete('/:id', deleteTask)
+TaskRouter.put('/:id', requireUser, updateTask)
+TaskRouter.delete('/:id', requireUser, deleteTask)
