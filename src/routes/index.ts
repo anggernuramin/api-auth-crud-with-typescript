@@ -1,8 +1,12 @@
 import { Application, Router } from 'express'
 import { TaskRouter } from './task.route'
+import { AuthRouter } from './auth.router'
 
 // Kumpulan router pada folder routes yang akan dikirimkan ke index
-const _routes: Array<[string, Router]> = [['/task', TaskRouter]]
+const _routes: Array<[string, Router]> = [
+  ['/task', TaskRouter],
+  ['/auth', AuthRouter]
+]
 
 // eslint-disable-next-line
 const routes = (app: Application) => {

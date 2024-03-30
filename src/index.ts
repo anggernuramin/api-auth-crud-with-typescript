@@ -3,6 +3,7 @@ import cors from 'cors'
 import bodyParser from 'body-parser'
 import routes from './routes'
 import { logger } from './utils/logger'
+import { deserializeToken } from './middlewares/deserializeToken'
 
 const app: Application = express()
 const port: number = 3000
@@ -23,6 +24,9 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   res.setHeader('Accesss-Control-Allow-Headers', '*')
   next()
 })
+
+// middleware untuk access token dan otorisasi saat user menhit endpoint
+app.use(deserializeToken)
 
 // Kumpulan endpoint
 routes(app)
