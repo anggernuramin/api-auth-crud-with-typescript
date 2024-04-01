@@ -18,6 +18,7 @@ export const addTask = async (req: Request, res: Response) => {
     logger.info('Gagal Tambah Data')
     return res.status(422).send({ status: false, statusCode: 422, data: {}, message: error.details[0].message })
   }
+  console.log('🚀 ~ addTask ~ addTask:', addTask)
 
   try {
     await addTaskToDB(value)
