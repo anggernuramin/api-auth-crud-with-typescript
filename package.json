@@ -2,7 +2,7 @@
   "name": "rest-api-auth-crud",
   "version": "1.0.0",
   "description": "Restful api auth - crud with express mongodb",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "dev": "nodemon",
     "start": "npx tsc -w",
